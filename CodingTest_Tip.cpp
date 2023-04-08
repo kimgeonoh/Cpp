@@ -89,4 +89,4 @@ switch(variable){
     case '2' return;
 }
 
-// 16. isalpha
+// 16. isalpha, isdigit, isupper, islower, 
