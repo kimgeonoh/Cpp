@@ -6,7 +6,7 @@
 using namespace std;
 
 bool cmp(vector<int> a, vector<int> b){
-    return a.at(1) < b.at(1);
+    return a[1] < b[1];
 }
 
 int solution(vector<vector<int>> routes){
