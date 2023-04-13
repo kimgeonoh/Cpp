@@ -3,7 +3,7 @@
 using namespace std;
 
 string solution(string number, int k) {
-	string answer;
+    string answer;
     int idx = -1;
     
     for(int i=0; i<number.size()-k; i++){ // answer에 넣어야하는 수, number.size()-k 개
