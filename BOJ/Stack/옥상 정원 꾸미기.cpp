@@ -5,16 +5,15 @@ using namespace std;
 int N;
 long long h;
 vector<long long> v; // build height
-stack<int> s;
+stack<long long> s;
 int answer[80000];
-int result;
+long long result;
 
 int main() {
     cin >> N;
     for(int i=0; i<N; i++){
         cin >> h; 
         v.push_back(h);
-        cout << h << '\n';
     }
     
     for(int i=0; i<N; i++){
@@ -29,13 +28,11 @@ int main() {
     }
     
     while(!s.empty()) { // 전부 볼 수 있어서 스택에 남아있는 경우
-        result += (N - 1 - s.top());
+        answer[s.top()] = (N - 1 - s.top());
         s.pop();
     }
     
-    for(int i=0; i<80000; i++) {
-        result += answer[i];
-    }
+    for(int i=0; i<80000; i++) result += answer[i];
     
     cout << result << '\n';
 }
