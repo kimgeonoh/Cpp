@@ -15,7 +15,7 @@ vector<int> solution(vector<int> prices) {
             s.pop();
             answer[top] = i - top;
         }
-        s.push(i);
+        s.push(i); // index를 stack에 넣는다
     }
     
     while(!s.empty()){
