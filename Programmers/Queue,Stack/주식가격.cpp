@@ -6,7 +6,6 @@ using namespace std;
 
 vector<int> solution(vector<int> prices) {
     int n = prices.size();
-    int temp;
     stack<int> s;
     vector<int> answer(n);
     
