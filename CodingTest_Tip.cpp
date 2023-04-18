@@ -40,7 +40,7 @@ class.push_back(CLASSNAME(a,b,c));
 // 6. 시간제한이 1초일때
 // N의 범위가 500인 경우 O(n3)
 // N의 범위가 2000인 경우 O(n2)
-// N의 범위가 100,00인 경우 O(n*log n)
+// N의 범위가 100,000인 경우 O(n*log n)
 // N의 범위가 10,000,000인 경우 O(n)
 
 // 7. 조건의 범위에 따라 long long 선언
@@ -74,7 +74,7 @@ vector<vector<int> > rotateMatrixBy90Degree(vector<vector<int> > a) {
 // 11. 경로탐색(최단거리, 시간), 네트워크(연결), 조합
 //     해당 유형은 bfs / dfs  로 풀 수 있다
 
-// 12. 삼항연산자는 리턴값을 반환한므로 cout 에서 1을 출력하고 싶다면 '1'이 아닌 1로 써야한다
+// 12. 삼항연산자는 리턴값을 반환한므로 cout 에서 1을 출력하고 싶다면 '-1'이 아닌 -1로 써야한다
 cout << (s.empty() ? -1 : s.top()) << '\n';
 
 // 13. stack<char> s
