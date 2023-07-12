@@ -1,21 +1,36 @@
-#include <bist/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int T,answer;
-vector<int> v[9][9];
+int arr[9][9];
 
-void test1(){
-        
-    }
-    test2() 
-    test3()
+void test1(int r){ // 가로
+    
+}
+void test2(int c){ // 세로
+    
+}
+void test3(){
+    
+}
 
 int main() {
     cin >> T;
     for(int t=1; t<=T; t++){
-        test1(); // 세로
-        test2(); // 가로
+        for(int i=0; i<9; i++){
+            for(int j=0; j<9; j++){
+                cin >> arr[i][j];
+            }
+        }
+        
+        for(int i=0; i<9; i++){
+            test1(i);
+        }
+        for(int j=0; j<9; j++){
+            test2(j);
+        }
+        
         test3(); // 3*3
         cout << '#' << t << ' ' << answer; // 정답일떄 1
     }
