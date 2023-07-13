@@ -74,7 +74,7 @@ vector<vector<int> > rotateMatrixBy90Degree(vector<vector<int> > a) {
 // 11. 경로탐색(최단거리, 시간), 네트워크(연결), 조합
 //     해당 유형은 bfs / dfs  로 풀 수 있다
 
-// 12. 삼항연산자는 리턴값을 반환한므로 cout 에서 1을 출력하고 싶다면 '-1'이 아닌 -1로 써야한다
+// 12. 삼항연산자는 리턴값을 반환한므로 cout 에서 아무것도 출력하고 싶지 않다면 0, -1을 출력하고 싶다면 '-1'이 아닌 -1로 써야한다.
 cout << (s.empty() ? -1 : s.top()) << '\n';
 
 // 13. stack<char> s
