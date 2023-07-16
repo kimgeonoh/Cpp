@@ -1,6 +1,6 @@
 // // https://blog.naver.com/study_electronic/223037427040
 // 유사한 문제: https://school.programmers.co.kr/learn/courses/30/lessons/60059, 해답: https://github.com/ndb796/python-for-coding-test/blob/master/12/4.cpp
-// 시계방향, 반시계방향으로 돌리는 것은 n-1-i 가 아니라 n-1-j 로 바꾸면 된다
+// 시계방향, 반시계방향으로 돌리는 것은 n-1-i 가 아니라 n-1-j 로 바꾸면 된다. 본 문제에서는 시계방향으로 돌리고 유사문제는 반시계로 돌린다
 
 #include <bits/stdc++.h>
 
