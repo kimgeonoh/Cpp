@@ -57,7 +57,7 @@ do{
 // 9. 2차원 벡터 만드는 방법 vector<vector<int>> v(n, vector<int>(m))
 //    2차원 리스트 만드는 방법 vector<int> a[][]
 
-// 10. 2차원 벡터 회전
+// 10. 2차원 벡터, 배열 회전 개념
 
 vector<vector<int> > rotateMatrixBy90Degree(vector<vector<int> > a) {
     int n = a.size(); // 행 길이 계산
@@ -65,7 +65,7 @@ vector<vector<int> > rotateMatrixBy90Degree(vector<vector<int> > a) {
     vector<vector<int> > result(n, vector<int>(m)); // 결과 리스트
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            result[j][n - i - 1] = a[i][j];
+            result[j][n - i - 1] = a[i][j]; // 시계방향, 반시계로 하려면 result[n-1-j][i] = a[i][j] 
         }
     }
     return result;
