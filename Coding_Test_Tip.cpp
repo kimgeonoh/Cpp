@@ -42,6 +42,7 @@ class.push_back(CLASSNAME(a,b,c));
 // N의 범위가 2000인 경우 O(n2)
 // N의 범위가 100,000인 경우 O(n*log n)
 // N의 범위가 10,000,000인 경우 O(n)
+// C언어 기준 1초당 1억 번 가능
 
 // 7. 조건의 범위에 따라 long long 선언
 
