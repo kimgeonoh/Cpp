@@ -1,5 +1,3 @@
-### 디저트 카페 코드
-
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -8,8 +6,8 @@ int N;
 int M[30][30];
 
 //        우하 좌하 좌상 우상 <- 사각형을 만들 방향 순서대로
-int dr[] = { 1,   1,  -1, -1 };
-int dc[] = { 1,  -1,  -1,  1 };
+int dr[] = { 1,  1, -1, -1 };
+int dc[] = { 1, -1, -1,  1 };
 int visited[110]; // index : 디저트 종류, value : 경로상에 있는 디저트인가?
 int destRow, destCol; // 시작점의 바로 좌하단 점(사각형이되는 마지막 점)
 vector<int> path;
@@ -90,4 +88,3 @@ int main() {
     }
     return 0;
 }
-```
