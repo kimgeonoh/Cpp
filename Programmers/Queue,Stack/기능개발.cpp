@@ -30,7 +30,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     
     vector<int> time = find(progresses, speeds);
     
-    int clock = 0;
+    int clock = 0, temp = 0;
     queue<int> q;
     for(auto v : time) q.push(v);
     //while(1){
@@ -39,12 +39,26 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         while(!q.empty()){
             int now = q.front();
             
-            temp++;
-            if(now <= clock){
+            clock++;
+            if(now == clock){
                 q.pop();
-                
+                temp++;
+                clock--;
             }
+            if(now > clock){
+                if(temp == 0) continue;
+                answer.push_back(temp);
+                temp = 0;
+            }
+            if(now < clock){
+                q.pop();
+                temp++;
+                clock--;
+            }
+                
         }
+        
+    answer.push_back(temp);
     //}
     
     return answer;
