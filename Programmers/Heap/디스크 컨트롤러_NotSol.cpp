@@ -42,5 +42,3 @@ int solution(vector<vector<int>> jobs) {
     
     return answer;
 }
-
-// https://mungto.tistory.com/15
