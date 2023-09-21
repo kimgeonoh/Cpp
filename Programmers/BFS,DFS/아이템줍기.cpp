@@ -49,7 +49,7 @@ int solution(vector<vector<int>> rectangle, int characterX, int characterY, int 
 
     // 4. BFS
     queue<pair<int, int>> q;
-    q.emplace(characterY, characterX);
+    q.push(characterY, characterX);
     while (!q.empty())
     {
         int y = q.front().first;
@@ -66,7 +66,7 @@ int solution(vector<vector<int>> rectangle, int characterX, int characterY, int 
 
             if (board[nextY][nextX] == 1)
             {
-                q.emplace(nextY, nextX);
+                q.push(nextY, nextX);
                 board[nextY][nextX] = board[y][x] + 1;
             }
         }
