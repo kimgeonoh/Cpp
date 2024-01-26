@@ -1,6 +1,7 @@
-# C/C++ Study
+C/C++ Study
+===========
 
-## Data structure
-## STL
-## Algorithm
-## Test
+# Data structure
+# STL
+# Algorithm
+# Test
