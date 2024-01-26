@@ -1,7 +1,6 @@
 # C/C++ Study
-
+<hr/></hr>
 ## Data structure
 ## STL
 ## Algorithm
-<hr/></hr>
 ## Test
