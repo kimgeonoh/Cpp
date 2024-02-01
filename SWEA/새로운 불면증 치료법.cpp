@@ -1,5 +1,6 @@
 // https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18_yw6I9MCFAZN
 // 1288
+// bit masking
 
 #include <iostream>
 #include <string>
