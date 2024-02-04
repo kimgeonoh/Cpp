@@ -7,20 +7,20 @@ C와 관련된 공부자료를 모아두고 복습하기 위해 만든 공간입
 ## Algorithm
 ## Test
 ==========
-todolist:
-stl data structure -> list,set,map,unordered
-naverblog/ssafy review
-codetree_pastexam, curriculum
-type_b_lecture
-os,data strcture book
-toeic speaking
-csts
-project
+todolist: <br>
+stl data structure -> list,set,map,unordered <br>
+naverblog/ssafy review <br>
+codetree_pastexam, curriculum <br>
+type_b_lecture <br>
+os,data strcture book <br>
+toeic speaking <br>
+csts <br>
+project <br>
 
 <br>
 
 02
--1 naverblog/ssafy review
--2 naverblog/ssafy review
--3 toeic
--4 toeic
+-1 naverblog/ssafy review <br>
+-2 naverblog/ssafy review <br>
+-3 toeic <br>
+-4 toeic <br>
