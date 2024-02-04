@@ -16,7 +16,7 @@ void func(vector<int>& list, char cmd, int x, stringstream& st)
         {
             int k;
             st >> k;
-            list.insert(list.begin() + insertIdx, k); // vector STL µ¿Àû insert Áö¿ø
+            list.insert(list.begin() + insertIdx, k); // // vector STL ë™ì  insert ì§€ì›
         }
         break;
     case 'D':
