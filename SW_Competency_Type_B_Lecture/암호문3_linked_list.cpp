@@ -14,9 +14,9 @@ struct Node {
 };
 
 class LinkedList {
-    Node* head; 
-    Node* tail; // option, A ¿¬»êÀ» À§ÇÔ. ¸¶Áö¸· ³ëµå¿¡ Ãß°¡¸¦ ºü¸£°Ô ÇÏ±â À§ÇÔ 
-    vector<Node*> nodeArr; // new ¿¬»êÀÚ¸¦ ÃÖ´ëÇÑ Àû°Ô »ç¿ëÇÏ±â À§ÇÔ, memory pool
+    Node* head;
+    Node* tail; // option, A ì—°ì‚°ì„ ìœ„í•¨. ë§ˆì§€ë§‰ ë…¸ë“œì— ì¶”ê°€ë¥¼ ë¹ ë¥´ê²Œ í•˜ê¸° ìœ„í•¨ 
+    vector<Node*> nodeArr; // new ì—°ì‚°ìë¥¼ ìµœëŒ€í•œ ì ê²Œ ì‚¬ìš©í•˜ê¸° ìœ„í•¨, memory pool
     int nodeCnt;
 
 public:
@@ -26,7 +26,7 @@ public:
 
     Node* getNewNode(int data) {
         nodeArr[nodeCnt] = new Node(data);
-        /* ´ÙÀ½ tc¿¡¼­ »ç¿ëÇØ¼­ ÀçÈ°¿ëÇÒ ¼ö ÀÖ´Â ÄÚµå
+        /* ë‹¤ìŒ tcì—ì„œ ì‚¬ìš©í•´ì„œ ì¬í™œìš©í•  ìˆ˜ ìˆëŠ” ì½”ë“œ
         if (nodeArr[nodeCnt] == nullptr) {
             node[nodeCnt] = new Node(data);
         }
@@ -38,41 +38,41 @@ public:
         return nodeArr[nodeCnt++];
     }
 
-    void insert(int idx, const vector<int>& nums) { // dummy node ¹Ì»ç¿ë
-        // ¿ø¼ÒÃß°¡
+    void insert(int idx, const vector<int>& nums) { // dummy node ë¯¸ì‚¬ìš©
+        // ì›ì†Œì¶”ê°€
         int st = 0;
         if (idx == 0) {
             if (head != nullptr) {
-                Node* newNode = getNewNode(nums[0]); // »õ·Î¿î head »ı¼º
-                newNode->next = head; // Çìµå link ¿¬°á
+                Node* newNode = getNewNode(nums[0]); // ìƒˆë¡œìš´ head ìƒì„±
+                newNode->next = head; // í—¤ë“œ link ì—°ê²°
                 head = newNode; // update
             }
             else {
-                head = getNewNode(nums[0]); // ºñ¾îÀÖ´Â linked list Ãß°¡
+                head = getNewNode(nums[0]); // ë¹„ì–´ìˆëŠ” linked list ì¶”ê°€
             }
             idx = 1;
             st = 1;
         }
 
-        // ¿øÇÏ´Â À§Ä¡±îÁö ÀÌµ¿
+        // ì›í•˜ëŠ” ìœ„ì¹˜ê¹Œì§€ ì´ë™
         Node* cur = head;
         for (int i = 1; i < idx; i++) {
             cur = cur->next;
         }
 
-        // °ª Ãß°¡
+        // ê°’ ì¶”ê°€
         for (int i = st; i < nums.size(); i++) {
             Node* newNode = getNewNode(nums[i]);
-            // cur->nxt ¿¡¼­
-            // cur->NewNode->nxt ·Î º¯°æ
-            // ÀÌ¶§, º¯°æÇØÁÖ´Â ¼ø¼­¸¦ À¯ÀÇÇÏÀÚ.
-            // 70line, 71lineÀ» ¹Ù²ã¼­ ¾²°ÔµÇ¸é cur ³ëµå°¡ º¯°æµÇ¾î¼­ ¹«ÇÑÈ÷ ÀÚ±âÀÚ½ÅÀ¸·Î Ã³¸®¸¦ ÇÏ°Ô µÈ´Ù.
-            newNode->next = cur->next; // NewNode -> nxt Ã³¸®
-            cur->next = newNode;       // cur -> NewNode Ã³¸®
-            cur = newNode;             // cur À§Ä¡ update
+            // cur->nxt ì—ì„œ
+            // cur->NewNode->nxt ë¡œ ë³€ê²½
+            // ì´ë•Œ, ë³€ê²½í•´ì£¼ëŠ” ìˆœì„œë¥¼ ìœ ì˜í•˜ì.
+            // 70line, 71lineì„ ë°”ê¿”ì„œ ì“°ê²Œë˜ë©´ cur ë…¸ë“œê°€ ë³€ê²½ë˜ì–´ì„œ ë¬´í•œíˆ ìê¸°ìì‹ ìœ¼ë¡œ ì²˜ë¦¬ë¥¼ í•˜ê²Œ ëœë‹¤.
+            newNode->next = cur->next; // NewNode -> nxt ì²˜ë¦¬
+            cur->next = newNode;       // cur -> NewNode ì²˜ë¦¬
+            cur = newNode;             // cur ìœ„ì¹˜ update
         }
 
-        // ¸¶Áö¸· ¿ø¼Ò¸¦ Ãß°¡ÇÑ °æ¿ì tail update
+        // ë§ˆì§€ë§‰ ì›ì†Œë¥¼ ì¶”ê°€í•œ ê²½ìš° tail update
         if (cur->next == nullptr) {
             tail = cur;
         }
@@ -80,30 +80,30 @@ public:
 
     void remove(int idx, int cnt) {
         Node* cur = head;
-        // °¡Àå ¾ÕÀ» Ã³¸®ÇÒ °æ¿ì ¿¹¿ÜÃ³¸®
+        // ê°€ì¥ ì•ì„ ì²˜ë¦¬í•  ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬
         if (idx == 0) {
             for (int i = 0; i < cnt; i++) {
                 cur = cur->next;
             }
-            // ¿øÇÏ´Â ¸¸Å­ head¸¦ ³Ñ¾î°£´Ù¸é »èÁ¦ÇØÁÖ´Â Ã³¸®¿Í °°°ÔµÈ´Ù.(Á»ºñ³ëµå »ı¼º)
+            // ì›í•˜ëŠ” ë§Œí¼ headë¥¼ ë„˜ì–´ê°„ë‹¤ë©´ ì‚­ì œí•´ì£¼ëŠ” ì²˜ë¦¬ì™€ ê°™ê²Œëœë‹¤.(ì¢€ë¹„ë…¸ë“œ ìƒì„±)
             head = cur;
             return;
         }
 
-        // °¡Àå ¾ÕÀÌ ¾Æ´Ò °æ¿ì
-        // »èÁ¦ÇÏ°í½ÍÀº ¸¸Å­ ¿òÁ÷¿© ´éÀ» ³»¸°´Ù
+        // ê°€ì¥ ì•ì´ ì•„ë‹ ê²½ìš°
+        // ì‚­ì œí•˜ê³ ì‹¶ì€ ë§Œí¼ ì›€ì§ì—¬ ë‹»ì„ ë‚´ë¦°ë‹¤
         for (int i = 1; i < idx; i++) {
             cur = cur->next;
         }
         Node* anchor = cur;
 
-        // ´éÀ» ³»·Á¼­ ¸Ö¸®±îÁö ´øÁø´Ù. ±× »çÀÌ´Â Á»ºñ³ëµå°¡ µÈ´Ù.
+        // ë‹»ì„ ë‚´ë ¤ì„œ ë©€ë¦¬ê¹Œì§€ ë˜ì§„ë‹¤. ê·¸ ì‚¬ì´ëŠ” ì¢€ë¹„ë…¸ë“œê°€ ëœë‹¤.
         for (int i = 0; i < cnt; i++) {
             cur = cur->next;
         }
         anchor->next = cur->next;
 
-        // ¸¶Áö¸· ¿ø¼Ò ¼öÁ¤ ½Ã ¿¹¿ÜÃ³¸®
+        // ë§ˆì§€ë§‰ ì›ì†Œ ìˆ˜ì • ì‹œ ì˜ˆì™¸ì²˜ë¦¬
         if (anchor->next == nullptr) {
             tail = anchor;
         }
