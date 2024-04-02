@@ -5,7 +5,7 @@
 using namespace std;
 
 int N, K;
-int dp[101][1001]; // dp[n][k]
+int dp[101][1001]; // dp[n][k], 1~n번 물건, k가방으로 얻을 수 있는 최대 가치
 int w[101], v[101];
 int ans;
 
