@@ -42,9 +42,9 @@ int main() {
 
         for (int i = N; i >= 1; i--) {
             if (come[i][j] == 1) {
-                used[i] = 0;
+                used[i] = 0; // 사용하지 않았다.
             } else {
-                used[i] = 1;
+                used[i] = 1; // 사용했다
                 j -= w[i];
             }
         }
