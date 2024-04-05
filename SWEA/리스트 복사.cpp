@@ -37,6 +37,7 @@ void init()
 
 void makeList(char mName[], int mLength, int mListValue[])
 {
+    // memcpy(dest, src, sizeof), src -> des 메모리 복사
     memcpy(initValue[initNumber], mListValue, mLength * sizeof(int));
 
     address[string(mName)] = addressNumber;
@@ -52,19 +53,19 @@ void makeList(char mName[], int mLength, int mListValue[])
 
 void copyList(char mDest[], char mSrc[], bool mCopy)  // O(1)
 {
-    if (mCopy)
+    if (mCopy) // 깊은 복사
     {
-        address[string(mDest)] = addressNumber;
+        address[string(mDest)] = addressNumber; // new Address Number 할당
         addressNumber++;
 
         changeLog[changeNumber] = {-1, -1};
-        prevChange[changeNumber] = lastChange[address[string(mSrc)]];
-        lastChange[address[string(mDest)]] = changeNumber;
+        prevChange[changeNumber] = lastChange[address[string(mSrc)]]; // src 에서 발생한 마지막 이벤트를 받는다.
+        lastChange[address[string(mDest)]] = changeNumber; // des 에서 발생한 마지막 이벤트
         changeNumber++;
     }
-    else
+    else // 얕은 복사
     {
-        address[string(mDest)] = address[string(mSrc)];
+        address[string(mDest)] = address[string(mSrc)]; // 같은 이름의 같은 배열을 복사한다
     }
 }
 
