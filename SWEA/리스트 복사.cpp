@@ -9,10 +9,10 @@ const int MAX_LENGTH = 200000;
 const int MAX_ADDRESS = 6000;
 const int MAX_CHANGE = 110000;
 
-int initNumber;  // 만들어진 배열의 개수
+int initNumber;  // 만들어진 배열의 개수 <- 처음 생성된 배열
 int initValue[MAX_MAKE_LIST + 1][MAX_LENGTH + 1];  // 초기 배열 정보
 
-int addressNumber;  // 존재하는 배열의 개수
+int addressNumber;  // 존재하는 배열의 개수 <- 배열 복사로 만들어진 배열
 unordered_map<string, int> address;  // key: 배열 이름, value: 원본 배열의 번호
 
 int changeNumber;  // 변화 개수
