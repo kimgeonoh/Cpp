@@ -22,7 +22,7 @@ pair<int, int> changeLog[MAX_CHANGE + 1];  // 모든 변화 기록을 담는 배
     // updateElement    : (인덱스, 값) ; 인덱스의 값을 변경했다.
 
 int lastChange[MAX_ADDRESS + 1]; // lastChange[i] := i번 원본 배열의 마지막 변화 event 번호
-int prevChange[MAX_CHANGE + 1];  // prevChange[i] := i번 변화의 직전 변화 event 번호
+int prevChange[MAX_CHANGE + 1];  // prevChange[i] := i번 변화의 직전 변화 event 번호, 특정 이벤트가 어떤 이벤트 다음으로 일어낫는지를 기록, 부모 이벤트 기록
 
 
 void init()
