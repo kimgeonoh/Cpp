@@ -43,8 +43,8 @@ void makeList(char mName[], int mLength, int mListValue[])
     addressNumber++;
 
     changeLog[changeNumber] = {-1, initNumber};
-    prevChange[changeNumber] = -1;
-    lastChange[address[string(mName)]] = changeNumber;
+    prevChange[changeNumber] = -1; // 이전 정점이 없으므로 = root 이므로 -1을 기록
+    lastChange[address[string(mName)]] = changeNumber; // mName을 갖고있는 배열의 마지막 이벤트는 makeList인 정점이다
     changeNumber++;
 
     initNumber++;
