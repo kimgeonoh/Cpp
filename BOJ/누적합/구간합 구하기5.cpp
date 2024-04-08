@@ -6,7 +6,6 @@ int N, M;
 int arr[1025][1025]; // 1 ~ N, 1 ~ N
 
 int main() {
-    ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 	cin >> N >> M;
 
